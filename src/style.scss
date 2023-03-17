@@ -9,7 +9,7 @@ $gray: #dfe2eb;
 }
 
 body{
-    color: $dark_blue;
+    color: $dark_blue !important; // override codepen style
     font-size: 16px;
     line-height: normal;
 }
@@ -122,6 +122,9 @@ select.global-input{
                 border-color: $dark_blue;
                 color: #fff;
                 box-shadow: none;
+                .square{
+                  background: #fff;
+                }
             }
         }
         label{
@@ -130,10 +133,19 @@ select.global-input{
             font-size: 16px;
             line-height: 1;
             text-align: center;
-            padding: 12px 24px;
+            padding: 20px 32px;
             margin-right: -1px;
             border: 2px solid $gray;
             transition: all .3s;
+            display: flex;
+            flex-direction: row;
+            .square {
+                width: 8px;
+                height: 8px;
+                background: #03133f;
+                display: block;
+                margin-right: 4px;
+            }
             &[for=threeRowLayout]{
                 border-right: 0;
             }
