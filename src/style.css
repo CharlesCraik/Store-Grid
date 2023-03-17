@@ -140,8 +140,17 @@ select.global-input::before{
 	padding: 12px 24px;
 	margin-right: -1px;
 	border: 2px solid #dfe2eb;
-	
 	transition: all .3s;
+    display: flex;
+    flex-direction: row;
+}
+
+.layout-switch-container label .square {
+    width: 8px;
+    height: 8px;
+    background: #03133f;
+    display: block;
+    margin-right: 4px;
 }
 
 label[for=threeRowLayout] {
@@ -154,6 +163,10 @@ label[for=fourRowLayout] {
 
 .layout-switch-container label:hover {
 	cursor: pointer;
+}
+
+.layout-switch-container input:checked + label .square {
+    background: #fff;
 }
 
 .layout-switch-container input:checked + label {
